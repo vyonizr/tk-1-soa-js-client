@@ -162,7 +162,7 @@ export default function Topup({ user }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   try {
     const responseUser = await fetch(`${BASE_URL}/users/1`)
     const responseUserJSON = await responseUser.json()

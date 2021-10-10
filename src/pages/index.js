@@ -39,7 +39,7 @@ export default function Home({ user, products }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   try {
     const responseUser = await fetch(`${BASE_URL}/users/1`)
     const responseUserJSON = await responseUser.json()
